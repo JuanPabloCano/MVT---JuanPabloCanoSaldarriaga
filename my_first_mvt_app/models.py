@@ -10,3 +10,6 @@ class Relatives(models.Model):
     email = models.EmailField()
     birthday = models.DateField()
     family_relationship = models.CharField(max_length=255, default='Familiar')
+
+    def __str__(self):
+        return f"{self.name} - {self.last_name}"
